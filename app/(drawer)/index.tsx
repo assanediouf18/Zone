@@ -1,3 +1,4 @@
+import ZoneChat from "@/components/ZoneChat";
 import { useCallback, useEffect, useState } from "react";
 import { Text, View } from "react-native";
 import { GiftedChat, IMessage } from "react-native-gifted-chat";
@@ -28,7 +29,7 @@ export default function Index() {
 
   return (
     <View style={{ flex: 1 }}>
-      <GiftedChat messages={messages}/>
+      <ZoneChat messages={messages} onSend={messages => onSend(messages)} />
     </View>
   );
 }
