@@ -1,5 +1,6 @@
 import ZoneChat from "@/components/Chat/ZoneChat";
-import { useCallback, useEffect, useState } from "react";
+import { PhotoContext } from "@/components/PhotoContext";
+import { useCallback, useContext, useEffect, useState } from "react";
 import { Text, View } from "react-native";
 import { GiftedChat, IMessage } from "react-native-gifted-chat";
 
@@ -19,6 +20,7 @@ import { GiftedChat, IMessage } from "react-native-gifted-chat";
 export default function Index() {
   // this represents the state of the app in this demo
   const [messages, setMessages] = useState<IMessage[]>([]);
+  const pictures = useContext(PhotoContext);
 
   // Getting dummy data
   useEffect(() => {
