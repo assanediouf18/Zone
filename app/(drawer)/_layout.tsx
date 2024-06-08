@@ -12,6 +12,12 @@ export default function Layout() {
             title: "My Zone",
           }}
         />
+        <Drawer.Screen
+          name="add-photo"
+          options={{
+            headerShown: false
+          }}
+        />
       </Drawer>
     </GestureHandlerRootView>
   );

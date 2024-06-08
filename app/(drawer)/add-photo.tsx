@@ -45,6 +45,7 @@ export default function AddPhoto() {
 
   return (
     <View style={styles.container}>
+      {/* @ts-ignore */}
       <CameraView style={styles.camera} facing={facing as CameraType} ref={camera}>
         <View style={styles.buttonContainer}>
           <TouchableOpacity style={[styles.button]} onPress={takePicture}>
